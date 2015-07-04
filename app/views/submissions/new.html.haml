@@ -1,0 +1,9 @@
+.container
+	.row
+		.col-md-4.col-md-offset-2.col-xs-8.col-xs-offset-1
+			= simple_form_for @submission do |s|
+				= s.input :description, as: :text
+				= s.input :category, as: :string
+				= s.input :email, as: :email
+
+				= s.button :submit
