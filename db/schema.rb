@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704140913) do
+ActiveRecord::Schema.define(version: 20150704210612) do
 
   create_table "submissions", force: :cascade do |t|
     t.text     "description"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20150704140913) do
     t.string   "email"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "cost"
+    t.datetime "term"
   end
 
 end
