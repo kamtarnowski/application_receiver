@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc, require: false
 gem "haml-rails", "~> 0.9"
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'simple_form'
+gem "gritter", "1.1.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

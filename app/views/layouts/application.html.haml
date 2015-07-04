@@ -8,3 +8,5 @@
     = csrf_meta_tags
   %body
     = yield
+    - flash.each do |key, value|
+      = js add_gritter(value, flash[key], :image => key)
