@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704210612) do
+ActiveRecord::Schema.define(version: 20150704224359) do
 
   create_table "submissions", force: :cascade do |t|
     t.text     "description"
     t.string   "category"
     t.string   "email"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "cost"
     t.datetime "term"
+    t.string   "status",      default: "unread"
   end
+
+  add_index "submissions", ["status"], name: "index_submissions_on_status"
 
 end

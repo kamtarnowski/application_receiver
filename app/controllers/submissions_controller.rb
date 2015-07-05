@@ -7,7 +7,7 @@ class SubmissionsController < ApplicationController
 	def create
 		@submission = Submission.new(submission_params)
 
-		if @submision.save
+		if @submission.save
 			flash[:success] = 'Submission created successfully.'
 			redirect_to :back
 		else
