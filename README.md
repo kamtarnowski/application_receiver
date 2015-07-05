@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In case of any problems within DATABASE do the following steps:
 
-Things you may want to cover:
+1) Create new database (rake db:create)
+2) Make the migrations via command - rake db:migrate.
+3) Additional step - populate the DATABASE using rake db:seed.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+NAME: Application Receiver
