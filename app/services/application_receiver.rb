@@ -6,12 +6,13 @@ class ApplicationReceiver
 
 	def output(a, b = nil)
 		if b
-			case b.select { |a, b| b == 'true' }
-			when b.has_key?('category')
+			selected = b.select { |a, b| b == 'true' }
+			case selected
+			when selected.has_key?('category')
 				filter_result(:category)
-			when b.has_key?('description')
+			when selected.has_key?('description')
 				filter_result(:description)
-			when b.has_key?('email')
+			when selected.has_key?('email')
 				filter_result(:email)
 			else
 				unread_sub = Submission.where(status: 'unread').order('created_at ASC').limit(a).to_a
